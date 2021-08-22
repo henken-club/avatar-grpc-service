@@ -15,7 +15,9 @@
     "grpc",
     "arkweid",
     "lefthook",
-    "scripty"
+    "scripty",
+    "ghcr",
+    "buildx"
   ],
   "ignorePaths": [
     ".vscode/extensions.json",
