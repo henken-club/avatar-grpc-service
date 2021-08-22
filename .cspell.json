@@ -1,18 +1,28 @@
 {
   "version": "0.1",
   "language": "en",
-  "words": ["proto"],
+  "words": ["proto", "protogen", "typecheck", "deps", "workdir"],
   "ignoreWords": [
     "henken",
     "henkenclub",
     "protolint",
     "plexsystems",
-    "protobuf"
+    "protobuf",
+    "streetsidesoftware",
+    "imgproxy",
+    "darthsim",
+    "hadolint",
+    "grpc",
+    "arkweid",
+    "lefthook",
+    "scripty"
   ],
   "ignorePaths": [
     ".vscode/extensions.json",
     "dist/**",
+    "scripts/**",
     "node_modules/**",
-    ".cspell.json"
+    ".cspell.json",
+    "package-lock.json"
   ]
 }
