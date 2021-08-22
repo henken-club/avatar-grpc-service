@@ -7,9 +7,66 @@ on:
   pull_request:
 
 jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.4.2
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:eslint
+
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.4.2
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:prettier
+
+  typecheck:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.4.2
+          cache: npm
+      - run: npm ci
+      - run: npm run protogen
+      - run: npm run typecheck
+
   protolint:
     name: protolint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: plexsystems/protolint-action@v0.2.0
+
+  cspell:
+    name: cspell
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: streetsidesoftware/cspell-action@v1.0.1
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.4.2
+          cache: npm
+      - run: npm ci
+      - run: npm run protogen
+      - run: npm run build

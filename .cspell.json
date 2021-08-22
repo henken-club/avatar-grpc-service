@@ -7,7 +7,8 @@
     "henkenclub",
     "protolint",
     "plexsystems",
-    "protobuf"
+    "protobuf",
+    "streetsidesoftware"
   ],
   "ignorePaths": [
     ".vscode/extensions.json",
