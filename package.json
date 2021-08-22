@@ -24,6 +24,7 @@
     "@shopify/prettier-config": "^1.1.2",
     "@tsconfig/node16": "^1.0.2",
     "@types/node": "^16.4",
+    "cspell": "^5.8.0",
     "eslint": "^7.30.0",
     "eslint-plugin-unused-imports": "^1.1.2",
     "grpc-tools": "^1.11.2",
